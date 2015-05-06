@@ -25,7 +25,7 @@
     'description': u"""Module to integrate sale_commission module and
     hr_payroll module. Creating a salary rule for commission and auto
     complete the commission input in the payslip""",
-    'author': 'KMEE',
+    'author': 'KMEE/Odoo Community Association(OCA)',
     'website': 'http://www.kmee.com.br',
     'depends': [
         'sale_commission',
@@ -38,5 +38,4 @@
         'view/hr_payslip.xml'
     ],
     'installable': True,
-    'auto_install': False,
 }
