@@ -19,7 +19,8 @@
 #
 ##############################################################################
 
-from openerp.osv import fields, osv
+from openerp.osv import osv
+
 
 class hr_payslip(osv.osv):
 
@@ -36,10 +37,10 @@ class hr_payslip(osv.osv):
             return res
         # Get the total commission for the date interval
         settlement_obj = self.pool.get('settlement')
-        settlements_ids = settlement_obj.search(cr, uid,
-                                                [('date_from', '>=', date_from),
-                                                 ('date_to', '<=', date_to)],
-                                                context=context)
+        settlements_ids = settlement_obj.search(
+            cr, uid,
+            [('date_from', '>=', date_from), ('date_to', '<=', date_to)],
+            context=context)
         commission_amount = 0.0
         settlements = settlement_obj.browse(cr, uid, settlements_ids, context)
         for settlement in settlements:
@@ -49,7 +50,7 @@ class hr_payslip(osv.osv):
         # Insert the commission value in the input list
         for input_line in input_line_ids:
             if input_line[2]:
-                if input_line[2].has_key('code') and\
+                if 'code' in input_line[2] and\
                         (input_line[2]['code'] == 'COM'):
                     input_line[2]['amount'] = commission_amount
 
