@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+         <template id="settlements_report_condensed_custom" inherit_id="sale_commission.settlements_report_condensed">
+             <xpath expr="//strong[.='CUSTOMER']" position="replace">
+                    <strong>RAZÃO SOCIAL</strong>
+             </xpath>
+             <xpath expr="//span[@t-field='line.invoice.partner_id.name']" position="replace">
+                 <span class="oe_editable" name="customer" t-field="line.invoice.partner_id.legal_name"/>
+             </xpath>
+        </template>
+
+         <template id="settlements_report_detailed_custom" inherit_id="sale_commission.settlements_report_detailed">
+             <xpath expr="//strong[.='CUSTOMER']" position="replace">
+                <strong>RAZÃO SOCIAL</strong>
+             </xpath>
+             <xpath expr="//span[@t-field='line.invoice.partner_id.name']" position="replace">
+                 <span class="oe_editable" name="customer" t-field="line.invoice.partner_id.legal_name"/>
+             </xpath>
+        </template>
+
+	</data>
+</openerp>

@@ -16,7 +16,8 @@
         'sale_commission'
                ],
     'data': [
-        'view/account_invoice_view.xml'
+        'view/account_invoice_view.xml',
+        'report/settlements_report.xml',
     ],
     'demo': [
         'demo/commission_demo.xml'
