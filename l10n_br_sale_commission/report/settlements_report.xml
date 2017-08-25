@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-	<data>
+<odoo>
 
          <template id="settlements_report_condensed_custom" inherit_id="sale_commission.report_settlement_condensed">
              <xpath expr="//th[.='Customer']" position="replace">
@@ -20,5 +19,4 @@
              </xpath>
         </template>
 
-	</data>
-</openerp>
+</odoo>
