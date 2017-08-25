@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_sale_order_line_agent_brazil_form" model="ir.ui.view">
+        <field name="name">view.sales.order.line.agent.form.view</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sped_sale.sale_order_line_brazil_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook[last()]" position="inside">
+                <page string="Comissão" name="commission_page" groups="l10n_br_base.GRUPO_SUPORTE">
+                        <field name="agents" />
+                        <field name="commission_free" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
