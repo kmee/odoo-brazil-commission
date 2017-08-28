@@ -40,13 +40,13 @@
                        <!--attrs="{'readonly': [('commission_free', '=', True)]}"/>-->
             <!--</xpath>-->
 
-            <!--<field name="amount_total" position="after">-->
-                <!--<field name="commission_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>-->
-            <!--</field>-->
+            <field name="produtos_vr_nf" position="after">
+                <field name="commission_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </field>
 
-            <!--<xpath expr="//field[@name='order_line']" position="after">-->
-                <!--<button name="recompute_lines_agents" type="object" string="Recompute lines agents" states="draft"></button>-->
-            <!--</xpath>-->
+            <xpath expr="//field[@name='sale_order_line_produto_ids']" position="after">
+                <button name="recompute_lines_agents" type="object" string="Recompute lines agents" states="draft"></button>
+            </xpath>
 
         </field>
     </record>
