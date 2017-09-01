@@ -4,7 +4,7 @@
     <record id="view_sales_to_invoice_order_agent_form_view" model="ir.ui.view">
         <field name="name">view.sales.order.agent.form.view</field>
         <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sped_sale.sales_to_invoice_order_form_view"/>
+        <field name="inherit_id" ref="sped_sale.sale_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//notebook[last()]" position="inside">
                 <page string="Comissão" name="commission_page" >
